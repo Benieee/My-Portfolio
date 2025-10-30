@@ -1,5 +1,7 @@
 /* Custom Styles for Projects Page */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 :root {
   --primary-color: #800000; /* Maroon */
   --secondary-color: #6c757d;
@@ -7,12 +9,14 @@
   --light-color: #f8f9fa;
   --success-color: #198754;
   --accent-color: #551515; /* Lighter maroon for accents */
+  --white-color: #ffffff;
+  --transition: all 0.3s ease;
 }
 
 /* Hero Section */
 .hero-section {
   height: 40vh;
-  background: linear-gradient(135deg, rgba(155, 1, 1, 0.85), rgba(195, 0, 0, 0.85)), 
+  background: linear-gradient(135deg, rgba(128, 0, 0, 0.85), rgba(195, 0, 0, 0.85)), 
               url('../assets/Benie1.jpg');
   background-size: cover;
   background-position: center center;
@@ -20,11 +24,15 @@
   background-attachment: fixed;
   display: flex;
   align-items: center;
+  color: var(--white-color);
 }
 
 /* Filter Buttons */
 .btn-group .btn {
   border-radius: 0;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
 .btn-group .btn:first-child {
@@ -42,16 +50,20 @@
 
 .btn-outline-primary:hover,
 .btn-outline-primary.active {
-  background-color: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   border-color: var(--primary-color);
+  color: white;
 }
 
 /* Cards */
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: var(--transition);
   border: none;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+  height: 100%;
 }
 
 .card:hover {
@@ -59,26 +71,53 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
 .card-title {
   font-weight: 700;
   color: var(--dark-color);
+  margin-bottom: 0.75rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem;
 }
 
 /* Back Button */
 .btn-outline-primary {
   color: var(--primary-color);
   border-color: var(--primary-color);
+  padding: 10px 25px;
+  font-size: 1rem;
+  transition: var(--transition);
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   border-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(128, 0, 0, 0.2);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-section {
     height: 30vh;
-    background-attachment: scroll; /* Change to scroll for better mobile performance */
+    background-attachment: scroll;
+  }
+  
+  .btn-group .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
   }
 }
