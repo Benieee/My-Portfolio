@@ -1,0 +1,84 @@
+/* Custom Styles for Projects Page */
+
+:root {
+  --primary-color: #800000; /* Maroon */
+  --secondary-color: #6c757d;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+  --success-color: #198754;
+  --accent-color: #551515; /* Lighter maroon for accents */
+}
+
+/* Hero Section */
+.hero-section {
+  height: 40vh;
+  background: linear-gradient(135deg, rgba(155, 1, 1, 0.85), rgba(195, 0, 0, 0.85)), 
+              url('../assets/Benie1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+/* Filter Buttons */
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.btn-group .btn:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+/* Back Button */
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 30vh;
+    background-attachment: scroll; /* Change to scroll for better mobile performance */
+  }
+}

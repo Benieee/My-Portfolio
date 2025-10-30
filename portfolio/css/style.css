@@ -1,0 +1,293 @@
+/* Custom Styles for Benie's Portfolio */
+
+:root {
+  --primary-color: #5a0404; /* Maroon */
+  --secondary-color: #6c757d;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+  --success-color: #198754;
+  --accent-color: #cc0c0c; /* Lighter maroon for accents */
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(128, 0, 0, 0.85), rgba(104, 8, 8, 0.85)), 
+              url('../assets/Benie1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section h1 {
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .btn {
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.hero-section .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #a00000;
+}
+
+.hero-section .btn-outline-light {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* Navigation */
+.navbar {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(128, 0, 0, 0.9) !important;
+}
+
+.navbar.scrolled {
+  background-color: rgba(128, 0, 0, 0.95) !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-brand {
+  color: white !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 5px;
+  transition: color 0.3s;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: white !important;
+  font-weight: 600;
+}
+
+/* Section Spacing */
+section {
+  padding: 80px 0;
+}
+
+section.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* Section Titles */
+h2 {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* Skills Section */
+.skill-category h5 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.progress {
+  height: 30px;
+  border-radius: 15px;
+  overflow: visible;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+/* Timeline */
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid var(--primary-color);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+/* Contact Section */
+#contact .btn {
+  padding: 10px 20px;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  border: none;
+}
+
+#contact .btn:hover {
+  background-color: var(--accent-color);
+}
+
+.form-control {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(128, 0, 0, 0.25);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color) !important;
+}
+
+footer a {
+  transition: color 0.3s;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer a:hover {
+  color: white !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 100px 0;
+    background-attachment: scroll; /* Change to scroll for better mobile performance */
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  h2::after {
+    width: 50px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
