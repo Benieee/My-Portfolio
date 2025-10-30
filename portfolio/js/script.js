@@ -64,55 +64,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Animation on scroll
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.fade-in-up');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            
-            if (elementPosition < screenPosition) {
-                element.classList.add('animated');
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                fadeInObserver.unobserve(entry.target);
             }
         });
-    };
-
-    // Run on scroll
-    window.addEventListener('scroll', animateOnScroll);
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
     
-    // Run once on page load
-    animateOnScroll();
-
-    // Progress bar animations
-    const animateProgressBars = function() {
-        const progressBars = document.querySelectorAll('.progress-bar');
-        
-        progressBars.forEach(bar => {
-            const width = bar.style.width;
-            bar.style.width = '0';
-            
-            setTimeout(() => {
-                bar.style.transition = 'width 1.5s ease-in-out';
-                bar.style.width = width;
-            }, 300);
-        });
-    };
-
-    // Animate progress bars when skills section is in view
-    const skillsSection = document.getElementById('skills');
-    if (skillsSection) {
-        const skillsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateProgressBars();
-                    skillsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        skillsObserver.observe(skillsSection);
-    }
+    fadeElements.forEach(element => {
+        fadeInObserver.observe(element);
+    });
 
     // Navbar background change on scroll
     window.addEventListener('scroll', function() {
@@ -128,5 +97,29 @@ document.addEventListener('DOMContentLoaded', function() {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Add subtle animations to buttons on hover
+    const buttons = document.querySelectorAll('button, .btn');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Add subtle animations to cards on hover
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
     });
 });

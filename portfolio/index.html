@@ -15,7 +15,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"> BENIE</a>
+            <a class="navbar-brand" href="#">Benie Umutoniwase</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,7 +34,7 @@
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -60,14 +60,14 @@
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">About Me</h2>
-            <div class="row">
-                <div class="col-lg-4 text-center mb-4">
-                    <img src="assets/Benie.jpg" alt="Umutoniwase Iturihafi Benie" class="img-fluid rounded-circle mb-4" style="max-width: 250px; border: 5px solid #800000;">
+            <h2 class="text-center mb-5 fade-in">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 fade-in">
+                    <img src="assets/Benie.jpg" alt="Umutoniwase Iturihafi Benie" class="img-fluid rounded-circle mb-4" style="max-width: 250px;">
                     <h3>Umutoniwase Iturihafi Benie</h3>
                     <p class="text-muted">Bachelor of Business Computing Student</p>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 fade-in">
                     <h3 class="mb-4">My Journey</h3>
                     <p class="lead">I'm a dedicated Bachelor of Business Computing student at Bugema University, Kampala, with a strong foundation in IT, business, and accounting principles.</p>
                     <p>I'm eager to apply my skills in web development, programming (C), database management (MySQL), and various Microsoft Office applications in a practical setting.</p>
@@ -93,9 +93,9 @@
     <!-- Skills Section -->
     <section id="skills" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Skills & Competencies</h2>
+            <h2 class="text-center mb-5 fade-in">Skills & Competencies</h2>
             <div class="row">
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4 fade-in">
                     <h3 class="mb-4">Technical Skills</h3>
                     <div class="skill-category">
                         <h5>Web Development</h5>
@@ -112,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4 fade-in">
                     <h3 class="mb-4">Business & Soft Skills</h3>
                     <div class="skill-category">
                         <h5>Business Skills</h5>
@@ -141,47 +141,95 @@
     <!-- Projects Section -->
     <section id="projects" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Academic Projects</h2>
+            <h2 class="text-center mb-5 fade-in">Academic Projects</h2>
             <div class="row">
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4 fade-in">
                     <div class="card h-100">
+                        <img src="assets/project1.jpg" class="card-img-top" alt="Personal Website Development">
                         <div class="card-body">
                             <h5 class="card-title">Personal Website Development</h5>
                             <p class="card-text">Designed and developed a basic personal website from scratch, demonstrating proficiency in fundamental HTML and CSS concepts.</p>
                             <p class="card-text">Managed version control and deployment using GitHub Pages.</p>
-                            <a href="https://benieee.github.io/Website-development-/" target="_blank" rel="noopener" class="btn btn-primary">View Project</a>
+                            <div class="project-details">
+                                <span class="badge bg-primary me-2">HTML</span>
+                                <span class="badge bg-success me-2">CSS</span>
+                                <span class="badge bg-info">GitHub Pages</span>
+                            </div>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Technologies: HTML, CSS, GitHub Pages</small>
+                            <a href="https://benieee.github.io/Website-development-/" target="_blank" rel="noopener" class="btn btn-primary">View Project</a>
+                            <a href="#" class="btn btn-outline-primary">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4 fade-in">
                     <div class="card h-100">
+                        <img src="assets/project2.jpg" class="card-img-top" alt="More Projects">
                         <div class="card-body">
                             <h5 class="card-title">More Projects</h5>
                             <p class="card-text">Check out my other academic and personal projects including database design, programming assignments, and business case studies.</p>
                             <p class="card-text">Projects showcase my skills in various technologies and business domains.</p>
-                            <a href="projects/index.html" class="btn btn-primary">View All Projects</a>
+                            <div class="project-details">
+                                <span class="badge bg-primary me-2">Various</span>
+                                <span class="badge bg-success me-2">Technologies</span>
+                                <span class="badge bg-info">Business</span>
+                            </div>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Technologies: Various</small>
+                            <a href="projects/index.html" class="btn btn-primary">View All Projects</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
+            <div class="text-center mt-4 fade-in">
                 <a href="projects/index.html" class="btn btn-outline-primary">View All Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-5 bg-light">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Experience & Achievements</h2>
+            <h2 class="text-center mb-5 fade-in">Testimonials & Recommendations</h2>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6 mb-4 fade-in">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <p class="quote">Benie has shown exceptional dedication and analytical skills in her coursework. Her ability to bridge technical concepts with business applications sets her apart from her peers.</p>
+                            <div class="client-info">
+                                <img src="assets/professor1.jpg" alt="Professor" class="client-img">
+                                <div>
+                                    <h5>Dr. Samuel Mubiru</h5>
+                                    <p class="text-muted">Professor of Computer Science, Bugema University</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 fade-in">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <p class="quote">Working with Benie on our group project was a pleasure. Her leadership skills and technical expertise were instrumental in our success. She consistently delivered quality work on time.</p>
+                            <div class="client-info">
+                                <img src="assets/colleague1.jpg" alt="Colleague" class="client-img">
+                                <div>
+                                    <h5>Sarah Nakato</h5>
+                                    <p class="text-muted">Classmate, Bugema University</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Experience & Achievements</h2>
+            <div class="row">
+                <div class="col-md-12 fade-in">
                     <div class="timeline">
                         <div class="timeline-item mb-5">
                             <div class="row">
@@ -203,9 +251,9 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Get In Touch</h2>
+            <h2 class="text-center mb-5 fade-in">Get In Touch</h2>
             <div class="row">
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4 fade-in">
                     <h3>Contact Information</h3>
                     <ul class="list-unstyled">
                         <li class="mb-3">
@@ -231,7 +279,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 fade-in">
                     <h3>Send Me a Message</h3>
                     <form id="contactForm">
                         <div class="mb-3">
