@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #800000; /* Maroon */
+  --primary-color: #8B0000; /* Darker maroon for better contrast */
   --secondary-color: #6c757d;
   --dark-color: #212529;
   --light-color: #f8f9fa;
   --success-color: #198754;
-  --accent-color: #551515; /* Lighter maroon for accents */
+  --accent-color: #A52A2A; /* Brown accent for better accessibility */
   --white-color: #ffffff;
   --transition: all 0.3s ease;
 }
@@ -73,7 +73,7 @@ p {
 /* Hero Section */
 .hero-section {
   height: 100vh;
-  background: linear-gradient(135deg, rgba(128, 0, 0, 0.85), rgba(195, 0, 0, 0.85));
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(165, 42, 42, 0.85));
   display: flex;
   align-items: center;
   color: var(--white-color);
@@ -103,12 +103,13 @@ p {
   font-size: 1.1rem;
   margin: 10px 5px;
   animation: fadeInUp 1s ease 0.9s both;
+  color: white;
 }
 
 .hero-section .btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-  background-color: #a00000;
+  background-color: #B22222; /* Firebrick for hover state */
 }
 
 .hero-section .btn-outline-light {
@@ -126,12 +127,12 @@ p {
 .navbar {
   transition: var(--transition);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: rgba(128, 0, 0, 0.9) !important;
+  background-color: rgba(139, 0, 0, 0.95) !important;
   padding: 1rem 0;
 }
 
 .navbar.scrolled {
-  background-color: rgba(128, 0, 0, 0.95) !important;
+  background-color: rgba(139, 0, 0, 0.98) !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
 }
@@ -155,7 +156,7 @@ p {
   font-weight: 500;
   margin: 0 5px;
   transition: var(--transition);
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   position: relative;
   padding: 0.5rem 1rem;
 }
@@ -319,6 +320,7 @@ section.bg-light {
   text-align: center;
   position: relative;
   overflow: visible;
+  color: white;
 }
 
 .progress-bar::after {
@@ -382,7 +384,7 @@ section.bg-light {
   height: 12px;
   border-radius: 50%;
   background: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.2);
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.2);
 }
 
 /* Testimonials */
@@ -396,6 +398,7 @@ section.bg-light {
   font-style: italic;
   margin-bottom: 1.5rem;
   position: relative;
+  color: var(--dark-color);
 }
 
 .testimonial-card .quote::before,
@@ -440,11 +443,12 @@ section.bg-light {
   border: none;
   font-size: 1.1rem;
   transition: var(--transition);
+  color: white;
 }
 
 #contact .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(128, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(139, 0, 0, 0.3);
 }
 
 .form-control {
@@ -458,7 +462,7 @@ section.bg-light {
 
 .form-control:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.25rem rgba(128, 0, 0, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.25);
 }
 
 /* Footer */
@@ -470,7 +474,7 @@ footer {
 
 footer a {
   transition: var(--transition);
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   margin: 0 10px;
   display: inline-block;
 }
@@ -482,7 +486,7 @@ footer a:hover {
 
 footer p {
   margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Buttons */
@@ -492,11 +496,12 @@ footer p {
   padding: 10px 25px;
   font-size: 1rem;
   transition: var(--transition);
+  color: white;
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(128, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(139, 0, 0, 0.3);
 }
 
 .btn-outline-primary {
@@ -512,7 +517,7 @@ footer p {
   border-color: var(--primary-color);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(128, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(139, 0, 0, 0.2);
 }
 
 /* Project Details */

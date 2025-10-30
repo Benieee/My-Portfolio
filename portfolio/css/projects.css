@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #800000; /* Maroon */
+  --primary-color: #8B0000; /* Darker maroon for better contrast */
   --secondary-color: #6c757d;
   --dark-color: #212529;
   --light-color: #f8f9fa;
   --success-color: #198754;
-  --accent-color: #551515; /* Lighter maroon for accents */
+  --accent-color: #A52A2A; /* Brown accent for better accessibility */
   --white-color: #ffffff;
   --transition: all 0.3s ease;
 }
@@ -16,7 +16,7 @@
 /* Hero Section */
 .hero-section {
   height: 40vh;
-  background: linear-gradient(135deg, rgba(128, 0, 0, 0.85), rgba(195, 0, 0, 0.85));
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(165, 42, 42, 0.85));
   display: flex;
   align-items: center;
   color: var(--white-color);
@@ -103,7 +103,7 @@
   border-color: var(--primary-color);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(128, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(139, 0, 0, 0.2);
 }
 
 /* Responsive Adjustments */
